@@ -23,11 +23,19 @@ Per far funzionare correttamente lo script, è necessario installare sul compute
 #### A. Installare Node.js (Richiesto come JavaScript Runtime per YouTube)
 1. Scarica l'installer ufficiale dal sito [nodejs.org](https://nodejs.org/) (scegli la versione **LTS**).
 2. Avvia l'installazione, clicca sempre su "Avanti" assicurandoti che la spunta **"Add to PATH"** sia attiva.
+3. Al termine, apri un nuovo terminale e verifica con:
+```bash
+node -v
+```
 
 #### B. Installare FFmpeg (Richiesto per convertire e unire audio/video)
 Apri il Prompt dei Comandi o PowerShell come amministratore e digita:
 ```bash
-winget install ffmpeg
+winget install -e --id Gyan.FFmpeg
+```
+Dopo l'installazione, apri un nuovo terminale e verifica con:
+```bash
+ffmpeg -version
 ```
 
 In alternativa, scarica l'eseguibile dal sito ufficiale di FFmpeg e aggiungilo manualmente alle Variabili d'Ambiente del sistema.
@@ -35,13 +43,20 @@ In alternativa, scarica l'eseguibile dal sito ufficiale di FFmpeg e aggiungilo m
 ### 🍏 2. Guida per macOS
 
 #### A. Installare Node.js
-Scarica e avvia l'installer `.pkg` per Mac dal sito ufficiale [nodejs.org](https://nodejs.org/) (versione LTS).
+Scarica e avvia l'installer `.pkg` per Mac dal sito ufficiale [nodejs.org](https://nodejs.org/) (versione LTS). Verifica poi con:
+```bash
+node -v
+```
 
 #### B. Installare FFmpeg
 Il modo più veloce è usare [Homebrew](https://brew.sh/). Apri il Terminale e digita:
 
 ```bash
 brew install ffmpeg
+```
+Verifica l'installazione con:
+```bash
+ffmpeg -version
 ```
 
 ### 🐧 3. Guida per Linux (Ubuntu/Debian e derivati)
@@ -57,6 +72,11 @@ sudo apt install ffmpeg
 
 # Installa Node.js
 sudo apt install nodejs npm
+```
+Verifica poi con:
+```bash
+ffmpeg -version
+node -v
 ```
 
 ## 📦 Installazione delle Dipendenze Python
